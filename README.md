@@ -1,74 +1,116 @@
-# Wilia: Kit de Anotações de Acessibilidade para Web
+# Sistema Web para Gerenciamento de Objetos Perdidos no IFNMG
 
-[![Comunidade Figma](https://img.shields.io/badge/Figma-Comunidade-blue?logo=figma)](https://www.figma.com/community/file/1571609699997548870)
 ![Versão](https://img.shields.io/badge/version-v1.0.0-blue.svg)
+![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow.svg)
+![Django](https://img.shields.io/badge/backend-Django-green)
+![MySQL](https://img.shields.io/badge/database-MySQL-blue)
 
-**Wilia (um acrônimo para *Web Accessility Annotation Kit*) é um UI Kit para Figma focado em especificações de acessibilidade para tecnologias assistivas.**
-
-[![Figma](https://img.shields.io/badge/Acessar_o_Wilia_na_Comunidade_Figma-black?style=for-the-badge&logo=figma&logoColor=white&color=000000)](https://www.figma.com/community/file/1571609699997548870)
-
-![Capa do Wilia](images/00_capa_willia.jpg)
+Sistema web desenvolvido como Trabalho de Conclusão de Curso (TCC) do Bacharelado em Sistemas de Informação do IFNMG – Campus Salinas.
 
 ---
 
-## Esse projeto é uma ponte entre Design e Acessibilidade
+## Objetivo do Projeto
 
-O Wilia nasceu de uma observação comum em times de produtos digitais: um designer cria uma interface incrível, um desenvolvedor a implementa com perfeição técnica, mas, no final, algo crucial se perde no caminho. Uma pessoa que usa leitor de tela não consegue preencher o formulário, ou um usuário que navega pelo teclado não alcança o botão principal.
+O projeto tem como objetivo propor e desenvolver um sistema web capaz de auxiliar no gerenciamento de objetos perdidos e encontrados no IFNMG – Campus Salinas, centralizando informações e organizando o processo de devolução de pertences à comunidade acadêmica.
 
-Essa lacuna acontece porque a conversa sobre acessibilidade nem sempre ocorre. Faltam ferramentas e uma linguagem comum para que o designer possa dizer ao desenvolvedor: *"Este ícone precisa ser anunciado como 'Fechar'"*, ou *"A ordem de foco nesta seção deve ser esta"*.
+A proposta surgiu a partir da identificação de dificuldades no controle atual dos objetos encontrados dentro da instituição, onde o processo ocorre principalmente por meio de anotações informais e mensagens trocadas em grupos de WhatsApp.
 
-**O Wilia existe para ser essa conversa.** Ele nasceu para traduzir os requisitos de acessibilidade em especificações visuais, claras e diretas, dentro do Figma.
+---
 
-A missão do kit é simples: **tornar a especificação de acessibilidade uma parte natural e intuitiva do fluxo de trabalho**, e não uma preocupação tardia.
+## Funcionalidades Propostas
 
-## O que você pode documentar com o Wilia?
+- Cadastro de objetos encontrados;
+- Upload de fotos dos itens;
+- Registro de local e data do objeto encontrado;
+- Consulta pública dos objetos cadastrados;
+- Solicitação de devolução;
+- Controle de status dos objetos;
+- Área administrativa para gerenciamento;
+- Relatórios de acompanhamento.
 
-O kit oferece um conjunto de "etiquetas" e "notas" visuais que você pode usar para anotar seus designs. Com elas, você pode especificar:
+---
 
-![Visao Geral dos componentes do kit wilia](images/02_visao_geral_dos_componentes_do_kit_wilia.jpg)
+## Tecnologias Utilizadas
 
-* **Estrutura e Semântica:** A hierarquia de Cabeçalhos (`h1`-`h6`), as Regiões e *landmarks* da página (`header`, `main`, etc.).
-* **Interatividade:** A função de Botões, o destino de Hiperlinks e todos os detalhes de Campos de Entrada de formulários.
-* **Conteúdo:** O propósito de Imagens e seus textos alternativos.
-* **Comportamento:** A Ordem de Foco para navegação por teclado e a Ordem de Leitura para leitores de tela.
-* **Casos Especiais:** Usar a Anotação Geral para instruções extras ou instruir o que um leitor de tela deve Ignorar (elementos decorativos).
+- Python
+- Django
+- MySQL
+- HTML
+- CSS
+- JavaScript
+- Figma
 
-## Como Usar o Wilia (O Componente "Multiespecificação")
+---
 
-O *Wilia* foi projetado para ser uma ferramenta de produtividade. Em vez de procurar por componentes individuais na biblioteca, você usará principalmente o componente **`Multiespecificação`**.
+## Estrutura do Repositório
 
-![Willia multicomponente](images/willia_multicomponente.png)
+```text
+/academico/          -> Arquivos do TCC (.tex, .bib, PDF)
+/sistema/            -> Código-fonte do sistema web
+/pesquisa-opiniao/   -> Dados da pesquisa aplicada com os alunos
+/images/             -> Imagens do projeto e protótipos
+README.md            -> Apresentação do projeto
+```
 
-Este componente único agrupa todas as especificações em um só lugar, permitindo que você o configure rapidamente usando as *variants* do Figma.
+---
 
-1.  **Acesse o Kit** na [Comunidade Figma](https://www.figma.com/community/file/1571609699997548870).
-2.  **Copie** o componente `Multiespecificação` (ou duplique o kit para usá-lo como biblioteca).
-3.  **Cole** o componente em seu design.
-4.  Com o componente selecionado, vá ao **painel de Design** (à direita).
-5.  Use as **propriedades (variants)** para selecionar o tipo de especificação que você precisa (ex: "Tipo = Cabeçalho", "Tipo = Botão", etc.).
-6.  Preencha as propriedades da anotação (como nível do heading, atributos ARIA, etc.).
+## Pesquisa de Opinião
 
-> **Nota Importante:** Caso o componente apresente algum comportamento inesperado ou bug visual, recomenda-se redefinir a instância. Selecione o componente, clique no menu "•••" (Mais opções) no painel de Design e escolha a opção "Redefinir instância" (Reset instance).
+Foi realizada uma pesquisa de opinião com estudantes do IFNMG – Campus Salinas para compreender a dimensão do problema relacionado à perda de objetos dentro da instituição.
 
-## O que você encontra neste repositório?
+### Resultados obtidos
 
-Este repositório contém todo o material acadêmico relacionado ao projeto:
+- 61% dos entrevistados já perderam algum objeto no campus;
+- 73% dos alunos que perderam objetos não conseguiram recuperá-los;
+- A maioria demonstrou interesse em um sistema digital para auxiliar na devolução de pertences.
 
-* `/academico/`: Pasta contendo os arquivos-fonte do TCC (arquivos `.tex`, `.bib`, imagens) e a versão final em `.pdf`.
-* `README.md`: Este arquivo de apresentação.
-* `LICENSE`: A licença do projeto.
-* `/images/`: Pasta contendo imagens do Willia.
+Os dados completos encontram-se na pasta:
 
-## Mentores do Projeto (Referências)
+```text
+/pesquisa-opiniao/
+```
 
-A sabedoria do *Wilia* é construída sobre os padrões que guiam a web acessível:
-* World Wide Web Consortium (W3C): WCAG 2.2 e WAI-ARIA Authoring Practices Guide (APG).
-* WebAIM (Web Accessibility in Mind): Incluindo o relatório "The WebAIM Million".
-* Mozilla (MDN Web Docs): Guias práticos de implementação de acessibilidade.
-* Movimento Web para Todos (MWPT): A principal iniciativa sobre o tema no Brasil.
+---
 
-<!--
+## Metodologia
+
+O trabalho adota uma abordagem de pesquisa aplicada com foco no desenvolvimento de software, envolvendo:
+
+- Levantamento de requisitos;
+- Entrevistas com vigilantes e bibliotecárias;
+- Pesquisa de opinião com alunos;
+- Prototipação de interfaces;
+- Desenvolvimento do sistema web;
+- Validação junto aos stakeholders.
+
+---
+
+## Instituição
+
+Instituto Federal do Norte de Minas Gerais – Campus Salinas
+
+Curso: Bacharelado em Sistemas de Informação
+
+---
+
+## Autor
+
+Carlos Henrique Lima do Nascimento
+
+---
+
+## Orientador
+
+Arthur Faria Porto
+
+---
+
+## Status do Projeto
+
+Projeto em desenvolvimento.
+
+---
+
 ## Licença
 
-Este projeto está licenciado sob a **CC BY-NC-SA 4.0** - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
--->
+Projeto desenvolvido para fins acadêmicos.
